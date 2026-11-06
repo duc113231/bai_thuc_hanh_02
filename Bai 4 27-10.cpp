@@ -1,7 +1,4 @@
-#include <iostream>
 #include <stdio.h>
-using namespace std;
-
 struct Data {
     int masv;
     char ten[50];
