@@ -1,0 +1,160 @@
+Skip to main content
+TTMMT
+Home
+Dashboard
+My courses
+7
+jcbn06hk12627
+Tuần 9 (15~21/11) Lớp ảo và Giao diện
+BT Lập trình
+
+BT Lập trình
+Question 3
+Incorrect
+Marked out of 1.00
+Flag question
+Question text
+Cài đặt hai lớp Rectangle và Square như thiết kế dưới đây.
+
+RectangleShape class
+
+Lớp Rectangle (hình chữ nhật) gồm:
+
+Phương thức toString() trả về String dạng “Rectangle (<length>, <width>)”, vd “Rectangle (2, 5)”.
+
+ Phương thức compareTo(Rectangle that) trả về:
+
+-1: nếu this.area() < that.area()
+1: nếu this.area() > that.area()
+0: còn lại.
+Lớp Square (hình vuông):
+
+Phương thức khởi tạo Square(int side): khởi tạo độ dài hai cạnh về cùng giá trị side, khởi tạo diagonal = side * 1.4142.
+
+Phương thức getSide(): trả về length hoặc width của lớp cha.
+
+Phương thức toString() trả về String dạng “Square (<length>, <width>)”, vd “Square (5, 5)”.
+
+
+Cài đặt lớp ShapeManagement theo thiết kế sau.
+
+ShapeManagement
+
+Phương thức khởi tạo: khởi tạo đối tượng mới ArrayList<Rectangle> để lưu danh sách hình khối (Rectangle hoặc Square).
+
+Phương thức add(int a, int b): thêm vào cuối danh sách
+
+một Rectangle mới với hai thuộc tính như tham số, nếu a!=b.
+một Square mới với hai thuộc tính như tham số, nếu a==b.
+Phương thức remove(int s): xóa Rectangle/Square đầu tiên có area() == s khỏi danh sách. Trả về true nếu xóa thành công và ngược lại.
+
+Phương thức toString() trả về String gồm các rectangleObj.toString() hoặc squareObj.toString() cách nhau bởi \n.
+
+Phương thức sort(), thực hiện sắp xếp lại danh sách các Rectangle/Square theo area().
+
+Gợi ý: dùng Arrays.sort(shapeList);
+
+
+
+Viết ứng dụng MyShapes quản lý các hình khối theo kiểu loop {switch…case} gồm 4 chức năng:
+
+1.     Thêm mới Rectangle vào cuối danh sách
+
+        a.      Nhập độ dài 2 cạnh
+
+        b.     Lặp lại thêm mới cho đến khi người dùng muốn dừng.
+
+2.     Thêm mới Square vào cuối danh sách
+
+        a.      Nhập 1 độ dài cạnh
+
+        b.     Lặp lại thêm mới cho đến khi người dùng muốn dừng.
+
+3.     Xóa Rectangle/Square đầu tiên có area() bằng giá trị nhập vào.
+
+4.     Sắp xếp danh sách tăng dần theo area()
+
+5.     In danh sách ra màn hình
+
+0.     Thoát
+
+
+
+Sơ đồ thiết kế các lớp
+
+MyShapes
+
+Mã nguồn tham khảo
+
+import java.util.Scanner;
+
+class Rectangle implements Comparable {
+    //...
+}
+
+class Square extends Rectangle {
+    //...
+}
+
+class ShapeManagement {
+    //...
+}
+
+public class MyFriends {
+
+	public static void printMenu() {
+		System.out.println("1. Them moi Rectangle vao danh sach.");
+		System.out.println("2. Them moi Square vao danh sach.");
+		System.out.println("3. Xoa Rectangle/Square dau tien theo area.");
+                System.out.println("4. Sap xep danh sach tang theo area().");
+		System.out.println("5. In danh sach.");
+		System.out.println("0. Thoat.");
+		System.out.print("Hay chon mot chuc nang[0-5]: ");
+	}
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		int choice = -1;
+		while (choice != 0) {
+			printMenu();
+			choice = input.nextInt();
+			switch (choice) {
+				case 0: 
+					// xử lý 0
+					break;
+				case 1:
+					// xử lý 1
+					break;
+				case 2:
+					// xử lý 2
+					break;
+				case 3:
+					// xử lý 3
+					break;
+				case 4:
+				        // xử lý 4
+					break;
+				case 5:
+					// xử lý 5
+					break;
+				default:
+					throw new IllegalArgumentException("Unexpected value: " + choice);
+			}  // end switch
+		}  // end while
+	}  // end main
+}  // end class
+
+(Bài này không có test case trên Hoctructuyen. SV tự test trên máy riêng rồi check mà không thấy kết quả)
+
+
+Cách tính điểm: bấm Check để biên dịch và chấm toàn bộ test (kể cả test ẩn). Đúng ở lần Check thứ 1 được tối đa 100%, lần thứ 2 tối đa 95%, lần thứ 3 tối đa 90%… (mỗi lần Check chưa đúng mất 5%). Điểm câu là điểm cao nhất trong các lần Check.
+
+Answer:(penalty regime: 5, 10, 15, ... %)
+
+  
+Full screen
+Feedback
+Syntax Error(s)
+MyShapes.java:107: error: class, interface, annotation type, enum, record, method or field expected
+import java.util.Scanner;
+^
+1 error
